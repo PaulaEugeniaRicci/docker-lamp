@@ -50,7 +50,7 @@ Desde el navegador ingresando [http://127.0.0.1:8080]
 - `-d`: ejecuta el contenedor en modo detached, en el background. 
 - `-i`: para que sea interactivo (_mantiene STDIN abierto aunque este en modo detached_).
 - `-p`: mapeo de puertos.
-- `-v`: crea un volumen. Es imprescindible para persistir datos. A continuación de este flag se incluye "$PWD" en referencia al fichero actual, seguido de ":" y una ruta donde se guardarán los datos.
+- `-v`: crea un volume. Es imprescindible para persistir datos. A continuación de este flag se incluye "$PWD" en referencia al fichero actual, seguido de ":" y una ruta donde se guardarán los datos.
 
 
 ## Networks 🔩

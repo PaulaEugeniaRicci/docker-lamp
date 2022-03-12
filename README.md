@@ -22,8 +22,10 @@ docker-compose up
 ### 2. Abrir phpMyAdmin 
 Desde el navegador ingresando [http://127.0.0.1:8000](http://127.0.0.1:8000) 
 
+
 ### 3. Incluir proyecto
 Clonar NombreProyecto en `www/` y abrir [http://127.0.0.1/YourProject](http://127.0.0.1/YourProject)
+
 
 ### 4. Correr cliente MYSQL
 ....

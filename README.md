@@ -5,11 +5,13 @@ Docker con Apache, MySQL, PHPMyAdmin y PHP.
 ## 🛠️
 Se empleó la herramienta **docker-compose** para orquestar los diferentes contenedores. 
 
-## Sobre su uso:
+## Sobre su uso ⚙️
 - _Codigo relacionado con el servicio Apache debe incluirse en el fichero **"www"**_
-- _Scripts para crear BDD debe incluirse en el fichero **"dump"**_
+- _Scripts para crear BDD deben incluirse en el fichero **"dump"**_
 - _Variables de entorno pueden ser modificadas desde el **"archivo .yml"**_
-- _Para manipular los contenedores es necesario ngresar los siguientes **"comandos"** desde la terminal, ubicandose dentro del fichero que contiene el **"archivo .yml"**_
+- _Para manipular los contenedores es necesario ingresar los **"comandos"** desde la terminal, ubicandose dentro del fichero que contiene el **"archivo .yml"**_
+
+## Pasos 📌
 
 ### 1. Crear e iniciar los contenedores.
 
@@ -17,22 +19,34 @@ Se empleó la herramienta **docker-compose** para orquestar los diferentes conte
 docker-compose up 
 ```
 
-### 2. Ejecutar un comando en un contenedor particular, por ejemplo mysql.
+### 2. Abrir phpMyAdmin 
+Desde el navegador ingresando [http://127.0.0.1:8000](http://127.0.0.1:8000) 
+
+### 3. Incluir proyecto
+Clonar NombreProyecto en `www/` y abrir [http://127.0.0.1/YourProject](http://127.0.0.1/YourProject)
+
+### 4. Correr cliente MYSQL
+....
+
+
+## Otros comandos 📄
+
+### - Ejecutar un comando en un contenedor particular, por ejemplo mysql.
 ```
 docker-compose exec db mysql -u root -p
 ```
 
-### 3. Parar ejecución de contenedores.
+### - Parar ejecución de contenedores.
 ```
 docker-compose stop
 ```
 
-### 4. Reanudar ejecución de contenedores.
+### - Reanudar ejecución de contenedores.
 ```
 docker-compose start
 ```
 
-### 5. Parar y remover contenedores, imagenes, networks y volumes.
+### - Parar y remover contenedores, imagenes, networks y volumes.
 ```
 docker-compose down
 ```

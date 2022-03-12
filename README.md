@@ -37,7 +37,7 @@ Desde el navegador ingresando [http://127.0.0.1:8080]
 
 ## ¿Qué significan los flags y comandos? 📄
 
-####Comandos⌨️
+#### Comandos⌨️
 - `FROM`: inicializa una build stage y establece la imagen base.
 - `RUN`: busca imagen localmente, sino encuentra la busca y descarga, crea contenedor y lo ejecuta.
 - `COPY`: copia el contenido a un fichero destino dentro del contenedor.
@@ -46,7 +46,7 @@ Desde el navegador ingresando [http://127.0.0.1:8080]
 
 - `-name`: da un nombre para identificar el contenedor.
 
-####Flags⌨️
+#### Flags⌨️
 - `-d`: ejecuta el contenedor en **modo detached**, en el background. 
 - `-i`: para que sea interactivo (_mantiene STDIN abierto aunque este en modo detached_).
 - `-p`: mapeo de puertos.

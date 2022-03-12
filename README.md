@@ -1,6 +1,6 @@
 # docker-compose-lamp
 
-Docker con Apache, MySQL, PHPMyAdmin y PHP. 
+Docker con MySQL, PHPMyAdmin y PHP+Apache. 
 
 🛠️ Se empleó la herramienta **docker-compose** para orquestar los diferentes contenedores. 
 

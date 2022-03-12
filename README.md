@@ -12,7 +12,7 @@ Docker con Apache, MySQL, PHPMyAdmin y PHP.
 
 ## Pasos 📌
 
-### 1. Crear e iniciar los contenedores.
+### 1. Crear e iniciar los contenedores
 
 ```
 docker-compose up 

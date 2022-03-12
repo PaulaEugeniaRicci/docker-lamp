@@ -8,7 +8,7 @@ Docker con Apache, MySQL, PHPMyAdmin y PHP.
 - _Codigo relacionado con el servicio Apache debe incluirse en el fichero **`www/`**_
 - _Scripts para crear BDD deben incluirse en el fichero **`dump/`**_
 - _Variables de entorno pueden ser modificadas desde el **archivo `.yml`**_
-- _Para manipular los contenedores es necesario ingresar los **"comandos"** desde la terminal, ubicandose dentro del fichero que contiene el **archivo `.yml`**_
+- _Para manipular los contenedores es necesario ingresar los **comandos** desde la terminal, ubicandose dentro del fichero que contiene el **archivo `.yml`**_
 
 ## Pasos 📌
 

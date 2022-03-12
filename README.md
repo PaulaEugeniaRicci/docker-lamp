@@ -3,7 +3,7 @@
 Docker con Apache, MySQL, PHPMyAdmin y PHP. 
 
 ## 🛠️
-Se uso la herramienta **docker-compose** para orquestar los diferentes contenedores. 
+Se empleó la herramienta **docker-compose** para orquestar los diferentes contenedores. 
 
 ## Sobre su uso:
 - _Codigo relacionado con el servicio Apache debe incluirse en el fichero **"www"**_

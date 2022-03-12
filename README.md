@@ -44,7 +44,7 @@ Desde el navegador ingresando [http://127.0.0.1:8080]
 - `FROM`: inicializa una build stage y establece la imagen base.
 - `RUN`: busca imagen localmente, sino encuentra la busca y descarga, crea contenedor y lo ejecuta.
 - `COPY`: copia el contenido a un fichero destino dentro del contenedor.
-- `CMD`: ejecuta un comando no bien se crea el contenedor. Especifica **parametros** que se le darán al archivo ejecutable (_ver ENTRYPOINT_). _En este caso CMD [“/usr/sbin/httpd”,” -D”,” FOREGROUND”] permite correr el servidor en el fondo._
+- `CMD`: ejecuta un comando no bien se crea el contenedor. Especifica **parametros** que se le darán al archivo ejecutable (_ver ENTRYPOINT_). _En este caso CMD [“/usr/sbin/httpd”,” -D”,” FOREGROUND”] permite correr el servidor de fondo._
 
 #### Flags⌨️
 - `-d`: ejecuta el contenedor en **modo detached**, en el background. 

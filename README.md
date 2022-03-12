@@ -1,4 +1,4 @@
-# docker-compose-lamp
+# docker-lamp
 
 Docker con Apache, MySQL, PHPMyAdmin y PHP. 
 

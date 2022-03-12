@@ -23,12 +23,15 @@ docker-compose up
 Desde el navegador ingresando [http://127.0.0.1:8000](http://127.0.0.1:8000) 
 
 
+
 ### 3. Incluir proyecto
-Clonar NombreProyecto en `www/` y abrir [http://127.0.0.1/YourProject](http://127.0.0.1/YourProject)
+Clonar NombreProyecto en `www/` y abrir [http://127.0.0.1/NombreProyecto](http://127.0.0.1/NombreProyecto)
+
 
 
 ### 4. Correr cliente MYSQL
 ....
+
 
 
 ## Otros comandos 📄

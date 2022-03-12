@@ -41,17 +41,17 @@ Desde el navegador ingresando [http://127.0.0.1:8080]
 - `FROM`: inicializa una build stage y establece la imagen base.
 - `RUN`: busca imagen localmente, sino encuentra la busca y descarga, crea contenedor y lo ejecuta.
 - `COPY`: copia el contenido a un fichero destino dentro del contenedor.
-- `CMD`: ejecuta un comando no bien se crea el contenedor. Especifica parametros que se le darán al archivo ejecutable (_ver ENTRYPOINT_). _En este caso CMD [“/usr/sbin/httpd”,” -D”,” FOREGROUND”] permite correr el servidor en el fondo._
+- `CMD`: ejecuta un comando no bien se crea el contenedor. Especifica **parametros** que se le darán al archivo ejecutable (_ver ENTRYPOINT_). _En este caso CMD [“/usr/sbin/httpd”,” -D”,” FOREGROUND”] permite correr el servidor en el fondo._
 
 
-- `-name`: nombre para identificar el contenedor.
+- `-name`: da un nombre para identificar el contenedor.
 
 ####Flags⌨️
-- `-d`: ejecuta el contenedor en modo detached, en el background. 
+- `-d`: ejecuta el contenedor en **modo detached**, en el background. 
 - `-i`: para que sea interactivo (_mantiene STDIN abierto aunque este en modo detached_).
 - `-p`: mapeo de puertos.
-- `-v`: crea un volume. Es imprescindible para persistir datos. A continuación de este flag se incluye "$PWD" en referencia al fichero actual, seguido de ":" y una ruta donde se guardarán los datos.
+- `-v`: crea un **volume**. Es imprescindible para persistir datos. A continuación de este flag se incluye `"$PWD"` en referencia al fichero actual, seguido de ":" y una ruta donde se guardarán los datos.
 
 
 ## Networks 🔩
-Los contenedores se comunican entre sí a través de **networks**. Al iniciar, Docker crea una network por defecto llamada **bridge**, permitiendo comunicación container-a-container. Cada nuevo contenedor creado será parte de esa network, a menos que le indiques lo contrario. User-defined networks pueden ser creadas para configurar aspectos como la exposición de puertos, qué contenedores forman parte, y de qué forma se conectan con otros (_alias_). 
+Los contenedores se comunican entre sí a través de **networks**. Al iniciar, Docker crea una network por defecto llamada **bridge**, permitiendo comunicación container-a-container. Cada nuevo contenedor creado será parte de esa network, a menos que le indiques lo contrario. **User-defined networks** pueden ser creadas para configurar aspectos como la exposición de puertos, qué contenedores forman parte de la red, y de qué forma se conectan con otros (_a través de alias_). 

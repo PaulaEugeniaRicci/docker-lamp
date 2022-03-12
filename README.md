@@ -5,7 +5,8 @@ Docker con Apache, MySQL, PHPMyAdmin y PHP.
 🛠️ Con Dockerfile, sin herramientas de orquestación de contenedores.
 
 ## Sobre su uso ⚙️
-- _Cada contenedor (con su correspondiente servicio) tendra su Dockerfile y se ejecutará por separado_
+- _Cada contenedor (con su correspondiente servicio) tendrá su Dockerfile y se ejecutará por separado_
+- _Las imagenes para crear contenedores pueden bajarse de hub.docker.com_
 - _Codigo relacionado con el servicio Apache debe incluirse en el fichero **`www/`**_
 
 ## Pasos para APACHE📌

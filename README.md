@@ -6,10 +6,10 @@ Docker con Apache, MySQL, PHPMyAdmin y PHP.
 Se uso la herramienta **docker-compose** para orquestar los diferentes contenedores. 
 
 ## Sobre su uso:
-_- Codigo relacionado con el servicio Apache debe incluirse en el fichero **"www"**_
-_- Scripts para crear BDD debe incluirse en el fichero **"dump"**_
-_- Variables de entorno pueden ser modificadas desde el **"archivo .yml"**_
-_-Para manipular los contenedores es necesario ngresar los siguientes **"comandos"** desde la terminal, ubicandose dentro del fichero que contiene el **"archivo .yml"**_
+- _Codigo relacionado con el servicio Apache debe incluirse en el fichero **"www"**_
+- _Scripts para crear BDD debe incluirse en el fichero **"dump"**_
+- _Variables de entorno pueden ser modificadas desde el **"archivo .yml"**_
+- _Para manipular los contenedores es necesario ngresar los siguientes **"comandos"** desde la terminal, ubicandose dentro del fichero que contiene el **"archivo .yml"**_
 
 ### 1. Crear e iniciar los contenedores.
 

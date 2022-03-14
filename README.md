@@ -1,6 +1,6 @@
 # docker-lamp
 
-Docker con Apache, MySQL, PHPMyAdmin y PHP. 
+Docker con MySQL, PHPMyAdmin y PHP+Apache. 
 
 🛠️ Con Dockerfile, sin herramientas de orquestación de contenedores.
 
@@ -35,7 +35,7 @@ Desde el navegador ingresando [http://127.0.0.1:80]
 ```
 docker run --name nombre-contenedor-mysql -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=contrasenia -d mysql:version
 ```
-### 2. Ejecutar el script necesario apra crear y/o manipular la base de datos
+### 2. Ejecutar el script necesario para crear y/o manipular la base de datos
 ```
 docker exec -i nombre-contenedor mysql -u root -pcontrasenia < /ruta/al/script.sql
 ```

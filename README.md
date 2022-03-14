@@ -5,7 +5,7 @@ Docker con Apache, MySQL, PHPMyAdmin y PHP.
 🛠️ Con Dockerfile, sin herramientas de orquestación de contenedores.
 
 ## Sobre su uso ⚙️
-- _Cada contenedor (con su correspondiente servicio) tendrá su Dockerfile y se ejecutará por separado_
+- _Cada contenedor se ejecutará por separado_
 - _Las imagenes para crear contenedores pueden bajarse de hub.docker.com_
 - _Codigo relacionado con el servicio Apache debe incluirse en el fichero **`www/`**_
 
@@ -35,20 +35,21 @@ Desde el navegador ingresando [http://127.0.0.1:80]
 ```
 docker run --name nombre-contenedor-mysql -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=contrasenia -d mysql:version
 ```
-### 2. nombre-contenedor-mysql
+### 2. Ejecutar el script necesario apra crear y/o manipular la base de datos
 ```
 docker exec -i nombre-contenedor mysql -u root -pcontrasenia < /ruta/al/script.sql
 ```
-### 3. Ejecutar el script necesario para crear y/o manipular la base de datos
 
-
-
-### 4. Probar si funciona el servidor
 
 
 ## Pasos para PHPMyAdmin📌
 
-$ docker run --name myadmin -d --link mysql_db_server:db -p 8080:80 phpmyadmin
+### 1. Ejecutar, desde la terminal, los siguientes comandos:
+```
+docker run --name myadmin -d --link mysql_db_server:db -p 8080:80 phpmyadmin
+```
+### 2. Probar si funciona el servidor
+Desde el navegador ingresando [http://127.0.0.1:80]
 
 
 ## ¿Qué significan los flags y comandos? 📄

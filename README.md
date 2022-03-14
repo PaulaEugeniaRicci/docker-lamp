@@ -6,7 +6,7 @@ Docker con MySQL, PHPMyAdmin y PHP+Apache.
 
 ## Sobre su uso ⚙️
 - _Codigo relacionado con el servicio Apache debe incluirse en el fichero **`www/`**_
-- _Scripts para crear BDD deben incluirse en el fichero **`dump/`**_; serán ejecutados a través de volumes-entrypoint
+- _Scripts para crear BDD deben incluirse en el fichero **`dump/`**_; serán ejecutados a través de _volumes-entrypoint_
 - _Variables de entorno pueden ser modificadas desde el archivo **`.yml`**_
 - _Para manipular los contenedores es necesario ingresar los **comandos** desde la terminal, ubicandose dentro del fichero que contiene el archivo **`.yml`**_
 

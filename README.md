@@ -49,7 +49,7 @@ docker exec -i nombre-contenedor mysql -u root -pcontrasenia < /ruta/al/script.s
 docker run --name myadmin -d --link mysql_db_server:db -p 8080:80 phpmyadmin
 ```
 ### 2. Probar si funciona el servidor
-Desde el navegador ingresando [http://127.0.0.1:80]
+Desde el navegador ingresando [http://127.0.0.1:8080]
 
 
 ## ¿Qué significan los flags y comandos? 📄

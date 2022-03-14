@@ -22,8 +22,8 @@ COPY src/ /var/www/html/
 
 ### 3. Ejecutar, desde la terminal, los siguientes comandos:
 ```
-$ docker build -t nombre-php .
-$ docker run -d --name nombre-app -p 80:80 -v "$PWD":/var/www/html  nombre-php
+docker build -t nombre-php .
+docker run -d --name nombre-app -p 80:80 -v "$PWD":/var/www/html  nombre-php
 ```
 
 ### 4. Probar si funciona el servidor
@@ -33,13 +33,13 @@ Desde el navegador ingresando [http://127.0.0.1:80]
 
 ### 1. Ejecutar, desde la terminal, los siguientes comandos:
 ```
-$ docker run --name nombre-contenedor-mysql -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:tag
+docker run --name nombre-contenedor-mysql -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:tag
 ```
-### 2. Ejecutar mas comandos para conectar con el servicio desde la línea de comando:
+### 2. nombre-contenedor-mysql
 ```
-$ docker run -it --network nombre-network --rm mysql mysql -hnombre-contenedor-mysql -uejemplousuario -p
+docker exec -it nombre-contenedor-mysql mysql -u root -ptest < sql.sql 
 ```
-### 3. 
+### 3. Ejecutar el script necesario para crear y/o manipular la base de datos
 
 
 

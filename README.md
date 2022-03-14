@@ -9,36 +9,39 @@ Docker con Apache, MySQL, PHPMyAdmin y PHP.
 - _Las imagenes para crear contenedores pueden bajarse de hub.docker.com_
 - _Codigo relacionado con el servicio Apache debe incluirse en el fichero **`www/`**_
 
-## Pasos para APACHE📌
+## Pasos para PHP-APACHE📌
 
 ### 1. Crear un archivo Dockerfile dentro del fichero donde se alojarán proyectos.
 
 ### 2. Editar el archivo Dockerfile:
 
 ```
-FROM _imagen_
-COPY index.html /usr/local/apache2/htdocs/
+FROM php:7.2-apache
+COPY src/ /var/www/html/
 ```
-Se suele usar alternativamente "/var/www/html/" como ruta en lugar de "/usr...".
 
 ### 3. Ejecutar, desde la terminal, los siguientes comandos:
 ```
-$ docker build -t nombre-apache .
-$ docker run -dit --name nombre-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ nombre-servicio-apache
+$ docker build -t nombre-php .
+$ docker run -d --name nombre-app -p 80:80 -v "$PWD":/var/www/html  nombre-php
 ```
+
 ### 4. Probar si funciona el servidor
-Desde el navegador ingresando [http://127.0.0.1:8080]
+Desde el navegador ingresando [http://127.0.0.1:80]
 
 ## Pasos para MYSQL📌
 
 ### 1. Ejecutar, desde la terminal, los siguientes comandos:
 ```
-$ docker run --name nombre-contenedor-mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:tag
+$ docker run --name nombre-contenedor-mysql -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:tag
 ```
-
-### 2. 
-
+### 2. Ejecutar mas comandos para conectar con el servicio desde la línea de comando:
+```
+$ docker run -it --network nombtr-network --rm mysql mysql -hnombre-contenedor-mysql -uejemplousuario -p
+```
 ### 3. 
+
+
 
 ### 4. Probar si funciona el servidor
 

@@ -23,13 +23,25 @@ Se suele usar alternativamente "/var/www/html/" como ruta en lugar de "/usr...".
 
 ### 3. Ejecutar, desde la terminal, los siguientes comandos:
 ```
-$ docker build -t nombre-servicio-apache .
+$ docker build -t nombre-apache .
 $ docker run -dit --name nombre-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ nombre-servicio-apache
 ```
 ### 4. Probar si funciona el servidor
 Desde el navegador ingresando [http://127.0.0.1:8080]
 
 ## Pasos para MYSQL📌
+
+### 1. Ejecutar, desde la terminal, los siguientes comandos:
+```
+$ docker run --name nombre-contenedor-mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:tag
+```
+
+### 2. 
+
+### 3. 
+
+### 4. Probar si funciona el servidor
+
 
 ## Pasos para PHPMyAdmin📌
 
@@ -48,6 +60,7 @@ Desde el navegador ingresando [http://127.0.0.1:8080]
 
 #### Flags⌨️
 - `-d`: ejecuta el contenedor en **modo detached**, en el background. 
+- `-e`: ejecuta una sentencia.
 - `-i`: para que sea interactivo (_mantiene STDIN abierto aunque este en modo detached_).
 - `-p`: mapeo de puertos.
 - `-v`: crea un **volume**. Es imprescindible para persistir datos. A continuación de este flag se incluye `"$PWD"` en referencia al fichero actual, seguido de ":" y una ruta donde se guardarán los datos.

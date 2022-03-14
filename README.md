@@ -33,11 +33,11 @@ Desde el navegador ingresando [http://127.0.0.1:80]
 
 ### 1. Ejecutar, desde la terminal, los siguientes comandos:
 ```
-docker run --name nombre-contenedor-mysql -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:tag
+docker run --name nombre-contenedor-mysql -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=contrasenia -d mysql:version
 ```
 ### 2. nombre-contenedor-mysql
 ```
-docker exec -it nombre-contenedor-mysql mysql -u root -ptest < sql.sql 
+docker exec -i nombre-contenedor mysql -u root -pcontrasenia < /ruta/al/script.sql
 ```
 ### 3. Ejecutar el script necesario para crear y/o manipular la base de datos
 
@@ -48,7 +48,7 @@ docker exec -it nombre-contenedor-mysql mysql -u root -ptest < sql.sql
 
 ## Pasos para PHPMyAdmin📌
 
-
+$ docker run --name myadmin -d --link mysql_db_server:db -p 8080:80 phpmyadmin
 
 
 ## ¿Qué significan los flags y comandos? 📄

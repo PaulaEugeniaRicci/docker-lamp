@@ -17,13 +17,13 @@ Docker con Apache, MySQL, PHPMyAdmin y PHP.
 
 ```
 FROM _imagen_
-COPY _index.html /var/www/html/_
-CMD _[“/usr/sbin/httpd”, “-D”, “FOREGROUND”]_
-EXPOSE 80
+COPY index.html /usr/local/apache2/htdocs/
 ```
+Se suele usar alternativamente "/var/www/html/" como ruta en lugar de "/usr...".
+
 ### 3. Ejecutar, desde la terminal, los siguientes comandos:
 ```
-$ docker build -t nombre_app .
+$ docker build -t nombre_srv .
 $ docker run -dit --name nombre_app -p 8080:80 -v "$PWD":www/var/www/html 
 ```
 ### 4. Probar si funciona el servidor
@@ -44,7 +44,7 @@ Desde el navegador ingresando [http://127.0.0.1:8080]
 - `FROM`: inicializa una build stage y establece la imagen base.
 - `RUN`: busca imagen localmente, sino encuentra la busca y descarga, crea contenedor y lo ejecuta.
 - `COPY`: copia el contenido a un fichero destino dentro del contenedor.
-- `CMD`: ejecuta un comando no bien se crea el contenedor. Especifica **parametros** que se le darán al archivo ejecutable (_ver ENTRYPOINT_). _En este caso CMD [“/usr/sbin/httpd”,” -D”,” FOREGROUND”] permite correr el servidor de fondo._
+
 
 #### Flags⌨️
 - `-d`: ejecuta el contenedor en **modo detached**, en el background. 

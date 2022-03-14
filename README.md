@@ -37,7 +37,7 @@ RUN a2enmod rewrite
 ### 4. Crear e iniciar los contenedores
 
 ```
-docker-compose up 
+docker-compose up -d
 ```
 
 ### 5. Abrir phpMyAdmin 
@@ -46,7 +46,7 @@ Desde el navegador ingresando [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 
 ### 6. Incluir proyecto
-Clonar NombreProyecto en `www/` y abrir [http://127.0.0.1/NombreProyecto](http://127.0.0.1/NombreProyecto)
+Clonar NombreProyecto -desde repositorio- en `www/` y abrir [http://127.0.0.1/NombreProyecto](http://127.0.0.1/NombreProyecto)
 
 
 

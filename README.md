@@ -24,7 +24,7 @@ Se suele usar alternativamente "/var/www/html/" como ruta en lugar de "/usr...".
 ### 3. Ejecutar, desde la terminal, los siguientes comandos:
 ```
 $ docker build -t nombre-servicio-apache .
-$ docker run -dit --name nombre-app -p 8080:80 -v "$PWD":www/var/www/html 
+$ docker run -dit --name nombre-app -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ nombre-servicio-apache
 ```
 ### 4. Probar si funciona el servidor
 Desde el navegador ingresando [http://127.0.0.1:8080]

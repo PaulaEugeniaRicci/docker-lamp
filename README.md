@@ -37,7 +37,7 @@ $ docker run --name nombre-contenedor-mysql -v /my/own/datadir:/var/lib/mysql -e
 ```
 ### 2. Ejecutar mas comandos para conectar con el servicio desde la línea de comando:
 ```
-$ docker run -it --network nombtr-network --rm mysql mysql -hnombre-contenedor-mysql -uejemplousuario -p
+$ docker run -it --network nombre-network --rm mysql mysql -hnombre-contenedor-mysql -uejemplousuario -p
 ```
 ### 3. 
 
